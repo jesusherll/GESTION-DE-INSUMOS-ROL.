@@ -1,0 +1,90 @@
+/* src/App.css */
+
+.App {
+  background-color: #f0f8ff;
+  min-height: 100vh;
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 1400px; /* Ancho máximo del contenido */
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+  padding: 0 20px; /* Añade márgenes laterales para que el contenido no toque los bordes */
+}
+
+/* --- Estilos de Botones --- */
+.primary-button {
+  background-color: #007bff; /* Un azul más vibrante y estándar */
+  color: white;
+  padding: 12px 20px; /* Hacemos el botón más grande */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px; /* Aumentamos el tamaño del texto */
+  font-weight: bold;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+
+.primary-button:hover {
+  background-color: #0056b3; /* Un azul más oscuro al pasar el mouse */
+}
+
+/* --- Estilos del Encabezado --- */
+.header-section {
+  display: flex;
+  justify-content: space-between; /* Esto coloca el título a la izquierda y el botón a la derecha */
+  align-items: center; /* Alinea el título y el botón verticalmente */
+  margin-bottom: 20px;
+  gap: 20px; /* Añade un espacio por si la pantalla se encoge */
+}
+
+/* --- Fin de Estilos del Encabezado --- */
+
+
+.main-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px; /* Espacio entre las columnas */
+}
+
+.members-column {
+  width: 25%;
+}
+
+.insumos-column {
+  width: 73%;
+}
+
+/* --- Estilos para Móviles (Diseño Responsivo) --- */
+@media (max-width: 768px) {
+  .header-section {
+    /* Mantenemos la dirección en fila para que el botón no se ponga debajo */
+    flex-direction: row; 
+    align-items: center;
+  }
+
+  /* Reducimos el tamaño de los títulos en móvil para que quepan */
+  .header-section h1 {
+    font-size: 1.1em !important; 
+  }
+  .header-section h2 {
+    font-size: 0.9em !important;
+  }
+
+  /* Hacemos el botón más pequeño en móviles para que no ocupe tanto espacio */
+  .primary-button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .main-layout {
+    flex-direction: column; /* Apila las columnas una sobre otra */
+  }
+
+  .members-column,
+  .insumos-column {
+    width: 100%; /* Las columnas ocupan todo el ancho en móviles */
+  }
+}
